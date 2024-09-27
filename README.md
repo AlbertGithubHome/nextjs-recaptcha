@@ -39,7 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## 项目说明
 
-本项目目的是展示在Next.js框架中怎样使用 Google reCAPTCHA 控件来验证，本着最小demo的原则，讲述本项目的创建过程，当然你可以直接下载本项目运行，只要替换 [app/concact/page.tsx](./app/concact/page.tsx) 中的 `sitekey` 和 [app/api/submit-form/route.tsx](./app/api/submit-form/route.tsx) 中的 `secretKey` 就可以了，下面来说说本项目的创建步骤，方面大家直接在自己的项目中集成 `Google reCAPTCHA`。
+本项目目的是展示在Next.js框架中怎样使用 Google reCAPTCHA 控件来验证，本着最小demo的原则，讲述本项目的创建过程，当然你可以直接下载本项目运行，只要替换 [app/concact/page.tsx](https://github.com/AlbertGithubHome/nextjs-recaptcha/blob/master/app/contact/page.tsx) 中的 `sitekey` 和 [app/api/submit-form/route.tsx](https://github.com/AlbertGithubHome/nextjs-recaptcha/blob/master/app/api/submit-form/route.tsx) 中的 `secretKey` 就可以了，下面来说说本项目的创建步骤，方面大家直接在自己的项目中集成 `Google reCAPTCHA`。
 
 ### 操作步骤
 
@@ -75,8 +75,8 @@ npm i --save-dev @types/react-google-recaptcha
 
 创建不存在的文件夹和文件，直接复制文件内容替换即可，注意修改成自己的`sitekey` 和 `secretKey`
 
-- [app/concact/page.tsx](./app/concact/page.tsx)
-- [app/api/submit-form/route.tsx](./app/api/submit-form/route.tsx)
+- [app/concact/page.tsx](https://github.com/AlbertGithubHome/nextjs-recaptcha/blob/master/app/contact/page.tsx)
+- [app/api/submit-form/route.tsx](https://github.com/AlbertGithubHome/nextjs-recaptcha/blob/master/app/api/submit-form/route.tsx)
 
 
 4. 构建和运行
