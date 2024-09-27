@@ -10,13 +10,13 @@ export async function POST(request: Request) {
   }
 
   // 发送请求到 Google 以验证 reCAPTCHA 响应
-  const secretKey = '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt'; // 你的 reCAPTCHA Secret Key
-  const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaValue}`;
+  // const secretKey = '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt'; // 你的 reCAPTCHA Secret Key
+  // const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaValue}`;
 
   // const captchaResponse = await fetch(verifyUrl, { method: 'POST' });
   // const captchaResult = await captchaResponse.json();
 
-  const params = { secret: secretKey, response: captchaValue };
+  const params = { secret: '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt', response: captchaValue };
   console.log(params);
   const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'post',
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
 
 
   if (captchaResult.success) {
+    console.log(name + '\n' + email + '\n' + message);
     // reCAPTCHA 验证成功，处理表单数据
     return NextResponse.json({ success: true });
   } else {
