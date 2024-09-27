@@ -50,7 +50,7 @@ node -v
 npm -v
 ```
 
-1. 运行命令创建新的 Next.js 项目
+#### 运行命令创建新的 Next.js 项目
 
 ```bash
 npx create-next-app@latest nextjs-recaptcha
@@ -58,7 +58,7 @@ npx create-next-app@latest nextjs-recaptcha
 
 在这里，`nextjs-recaptcha` 是你希望创建的项目名称。运行这个命令后，你会被提示选择一些选项（如是否使用 TypeScript，是否需要 ESLint 等）。
 
-2. 进入项目目录安装依赖项
+#### 进入项目目录安装依赖项
 
 ```bash
 cd nextjs-recaptcha
@@ -71,7 +71,7 @@ npm install react-google-recaptcha
 npm i --save-dev @types/react-google-recaptcha
 ```
 
-3. 创建前端页面和后端处理API
+#### 创建前端页面和后端处理API
 
 创建不存在的文件夹和文件，直接复制文件内容替换即可，注意修改成自己的`sitekey` 和 `secretKey`
 
@@ -79,7 +79,7 @@ npm i --save-dev @types/react-google-recaptcha
 - [app/api/submit-form/route.tsx](https://github.com/AlbertGithubHome/nextjs-recaptcha/blob/master/app/api/submit-form/route.tsx)
 
 
-4. 构建和运行
+#### 构建和运行
 
 完成上面步骤后，使用以下命令启动项目，之后访问 `http://域名:3000` 就可以进行测试了
 
