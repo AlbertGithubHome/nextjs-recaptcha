@@ -10,22 +10,17 @@ export async function POST(request: Request) {
   }
 
   // 发送请求到 Google 以验证 reCAPTCHA 响应
-  // const secretKey = '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt'; // 你的 reCAPTCHA Secret Key
-  // const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaValue}`;
-
-  // const captchaResponse = await fetch(verifyUrl, { method: 'POST' });
-  // const captchaResult = await captchaResponse.json();
-
-  const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: 'tk' };
+  const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: captchaValue };
   console.log(params);
   const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'post',
     body: JSON.stringify(params),
   });
+
+  // 输出返回结果
   console.log(captchaResponse);
   const captchaResult = await captchaResponse.json();
   console.log(captchaResult);
-
 
   if (captchaResult.success) {
     console.log(name + '\n' + email + '\n' + message);
@@ -33,7 +28,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } else {
     // reCAPTCHA 验证失败
-    return NextResponse.json({ error: 'reCAPTCHA validation failed' }, { status: 400 });
+    return NextResponse.json({ error: 'reCAPTCHA validation failed.' + JSON.stringify(captchaResult) }, { status: 400 });
   }
 }
 
