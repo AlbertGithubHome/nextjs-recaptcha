@@ -10,12 +10,17 @@ export async function POST(request: Request) {
   }
 
   // 发送请求到 Google 以验证 reCAPTCHA 响应
-  const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: captchaValue };
-  console.log(params);
-  const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-    method: 'post',
-    body: JSON.stringify(params),
-  });
+  const secretKey = '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt'; // 你的 reCAPTCHA Secret Key
+  const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaValue}`;
+
+  const captchaResponse = await fetch(verifyUrl, { method: 'POST' });
+
+  // const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: captchaValue };
+  // console.log(params);
+  // const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+  //   method: 'post',
+  //   body: JSON.stringify(params),
+  // });
 
   // 输出返回结果
   console.log(captchaResponse);
