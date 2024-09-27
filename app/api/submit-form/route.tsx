@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   }
 
   // 发送请求到 Google 以验证 reCAPTCHA 响应
-  const secretKey = '6LcYW1AqAAAAAO8l_oqRzn3fANif2goU3TVoa-Gt'; // 你的 reCAPTCHA Secret Key
+  const secretKey = '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5'; // 你的 reCAPTCHA Secret Key
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaValue}`;
 
   const captchaResponse = await fetch(verifyUrl, { method: 'POST' });
