@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   // const captchaResponse = await fetch(verifyUrl, { method: 'POST' });
   // const captchaResult = await captchaResponse.json();
 
-  const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: captchaValue };
+  const params = { secret: '6Lcca1AqAAAAAGOOD_aiY3o7Pmqz2THlyPAo1yx5', response: 'tk' };
   console.log(params);
   const captchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'post',
