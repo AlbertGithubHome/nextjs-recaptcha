@@ -24,6 +24,7 @@ export async function POST(request: Request) {
   });
   console.log(captchaResponse);
   const captchaResult = await captchaResponse.json();
+  console.log(captchaResult);
 
 
   if (captchaResult.success) {
