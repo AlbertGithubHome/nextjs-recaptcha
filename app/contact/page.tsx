@@ -87,7 +87,7 @@ export default function ContactForm() {
         </div>
 
         <ReCAPTCHA
-          sitekey="6LcYW1AqAAAAANAYUzm5R_z8xSkrnk8OPOAXvSBj" // 你的 Google reCAPTCHA Site Key
+          sitekey="6LcWalAqAAAAADdAOfTG3LlarDpbItSmlN9wtpPB" // 你的 Google reCAPTCHA Site Key
           onChange={handleCaptchaChange}
         />
 
