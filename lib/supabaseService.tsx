@@ -4,7 +4,7 @@ import { createClient } from '@supabase/supabase-js';
 // 定义 Profile 表的数据结构
 type Profile = {
     id?: number; // 自增主键可以是可选的
-    name: string;
+    created_at: string;
     age: number;
   };
 
