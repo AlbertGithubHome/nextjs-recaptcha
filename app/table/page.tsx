@@ -3,8 +3,15 @@
 import { useEffect, useState } from 'react';
 import { fetchData } from '@/lib/supabaseService';
 
+// 定义数据类型
+type Profile = {
+    id: number;
+    name: string;
+    age: number;
+  };
+
 export default function ClientComponent() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<Profile[] | null>(null);
 
   useEffect(() => {
     async function getData() {
