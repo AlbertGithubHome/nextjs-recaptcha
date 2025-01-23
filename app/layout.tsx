@@ -25,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head><script defer src="https://cloud.umami.is/script.js" data-website-id="f3ea9188-75f5-414e-8d5c-67786e538ebd"></script></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
